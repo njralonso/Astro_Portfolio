@@ -1,3 +1,9 @@
+---
+const response = await fetch("https://api.github.com/users/njralonso/repos");
+const data = response.json();
+console.log(data);
+---
+
 <main class="lg:w-[80vw] mx-auto border border-red-300">
 	<slot />
 </main>
