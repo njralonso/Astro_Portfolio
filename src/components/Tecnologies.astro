@@ -1,0 +1,20 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div
+	class="flex flex-col w-full p-4 bg-gray-800 rounded-xl shadow-lg border-2 border-gray-600 bg-opacity-5 sm:flex-col relative overflow-hidden hover:border-transparent hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition-all duration-300 ease-in-out"
+>
+	<div class="flex flex-col">
+		<h2 class="text-center text-2xl font-bold text-white mb-4 underline">
+			{title}
+		</h2>
+		<div class="flex flex-wrap gap-4 justify-around px-6">
+			<slot />
+		</div>
+	</div>
+</div>
