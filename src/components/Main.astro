@@ -6,8 +6,9 @@ import TecnologiesMobile from "./TecnologiesMobile.astro";
 import TecnologiesBackend from "./TecnologiesBackend.astro";
 import TecnologiesTools from "./TecnologiesTools.astro";
 import TecnologiesSection from "./TecnologiesSection.astro";
-import Swipper from "./Swipper.astro";
 import SwipperTodoApp from "./SwipperTodoApp.astro";
+import SwipperMemoji from "./SwipperMemoji.astro";
+import SwipperMines from "./SwipperMines.astro";
 ---
 
 <main class="lg:w-[80vw] px-4 lg:max-w-[60vw] mx-auto flex flex-col my-4">
@@ -20,5 +21,9 @@ import SwipperTodoApp from "./SwipperTodoApp.astro";
 	</TecnologiesSection>
 	<Timeline />
 	<TitleSection> Aplicaciones </TitleSection>
-	<SwipperTodoApp />
+	<div class="gap-4 mx-auto lg:mx-0 lg:flex lg:justify-center">
+		<SwipperMemoji />
+		<SwipperMines />
+		<SwipperTodoApp />
+	</div>
 </main>

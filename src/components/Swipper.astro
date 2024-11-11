@@ -34,7 +34,7 @@ const { title, ghButton, ghLink, vercelButton, vercelLink } = Astro.props;
 	});
 </script>
 
-<div class="p-4 bg-gray-400 w-fit rounded-xl bg-opacity-5 mx-auto">
+<div class="p-4 bg-gray-400 w-fit rounded-xl bg-opacity-5 h-min">
 	<p class="text-white font-bold text-center mb-2">{title}</p>
 	<!-- Slider main container -->
 	<div class="swiper">
@@ -73,21 +73,29 @@ const { title, ghButton, ghLink, vercelButton, vercelLink } = Astro.props;
 				></path>
 			</svg>
 		</a>
-		<a
-			href={vercelLink}
-			target="_blank"
-			class="mt-4 items-center gap-2 inline-flex w-full justify-center px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold leading-tight uppercase rounded-xl shadow-md hover:from-purple-600 hover:to-blue-500 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-300 ease-in-out transform hover:scale-105"
-		>
-			{vercelButton}<svg
-				role="img"
-				fill="#ffffff"
-				class="w-6 h-6 hover:shadow-lg"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg"
-				><title>Vercel</title><path d="M24 22.525H0l12-21.05 12 21.05z"
-				></path></svg
-			>
-		</a>
+		{
+			!vercelLink ? (
+				""
+			) : (
+				<a
+					href={vercelLink}
+					target="_blank"
+					class="mt-4 items-center gap-2 inline-flex w-full justify-center px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold leading-tight uppercase rounded-xl shadow-md hover:from-purple-600 hover:to-blue-500 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-300 ease-in-out transform hover:scale-105"
+				>
+					{vercelButton}
+					<svg
+						role="img"
+						fill="#ffffff"
+						class="w-6 h-6 hover:shadow-lg"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<title>Vercel</title>
+						<path d="M24 22.525H0l12-21.05 12 21.05z" />
+					</svg>
+				</a>
+			)
+		}
 	</div>
 </div>
 
