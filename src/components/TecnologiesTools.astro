@@ -2,13 +2,17 @@
 import { Image } from "astro:assets";
 import Tecnologies from "./Tecnologies.astro";
 
-import IconGit from "../images/icons/git.svg";
+import Figma from "../images/icons/figma.svg";
+import Github from "../images/icons/github.svg";
 import IconCopilot from "../images/icons/githubcopilot.svg";
 import IconGpt from "../images/icons/openai.svg";
+import Gemini from "../images/icons/gemini.svg";
 ---
 
 <Tecnologies title="Tools">
-	<Image src={IconGit} alt="icon_git.svg" class="w-12 h-12" />
+	<Image src={Figma} alt="icon_figma" class="w-12 h-12" />
+	<Image src={Github} alt="icon_github" class="w-12 h-12" />
 	<Image src={IconCopilot} alt="icon_copilot.svg" class="w-12 h-12" />
 	<Image src={IconGpt} alt="icon_gpt.svg" class="w-12 h-12" />
+	<Image src={Gemini} alt="icon_gemini.svg" class="w-12 h-12" />
 </Tecnologies>
