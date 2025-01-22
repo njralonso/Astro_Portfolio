@@ -1,19 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import ProfileImage from "../images/work.gif";
+import ProfileImage from "../images/avatar.png";
 ---
 
 <div
 	class="header px-4 lg:px-0 lg:max-w-[60vw] lg:flex lg:flex-row lg:mx-auto lg:gap-12 lg:justify-center"
 >
-	<div class="image">
+	<div class="image flex justify-center">
 		<Image
 			src={ProfileImage}
 			alt="presentation_image"
-			class="rounded-full mx-auto w-[25vw]"
+			class="rounded-full w-1/3 min-w-[300px] min-h-[300px]"
 		/>
 	</div>
-	<div class="description lg:gap-12 flex-col items-center content-center">
+	<div
+		class="description lg:gap-12 flex-col items-center content-center w-full"
+	>
 		<div class="mb-4">
 			<p
 				class="text-white text-center lg:text-left text-4xl font-semibold mb-4"
