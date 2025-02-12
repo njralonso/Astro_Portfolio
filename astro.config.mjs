@@ -4,10 +4,9 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  prefetch: {
-      prefetchAll: true,
-      defaultStrategy: 'tap'
+	prefetch: {
+		prefetchAll: true,
+		defaultStrategy: 'tap'
 	},
-
-  integrations: [tailwind()]
+	integrations: [tailwind()]
 });

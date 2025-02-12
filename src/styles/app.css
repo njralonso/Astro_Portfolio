@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tech-icon {
+	@apply w-14 h-14 transition-transform duration-300 ease-in-out hover:scale-110 hover:brightness-125 mx-auto;
+}

@@ -34,8 +34,14 @@ const { title, ghButton, ghLink, vercelButton, vercelLink } = Astro.props;
 	});
 </script>
 
-<div class="p-4 bg-gray-400 w-fit rounded-xl bg-opacity-5 h-min">
-	<p class="text-white font-bold text-center mb-2">{title}</p>
+<!-- <div
+	class="relative flex flex-col w-full p-6 rounded-xl border-2 border-gray-700 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 ease-in-out"
+>
+</div> -->
+<div
+	class="p-4 bg-gray-400 w-fit rounded-xl bg-opacity-5 h-min relative flex flex-col border-2 border-gray-700 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 ease-in-out"
+>
+	<p class="text-[#FAFAFA] font-bold text-center mb-2">{title}</p>
 	<!-- Slider main container -->
 	<div class="swiper">
 		<!-- Additional required wrapper -->
@@ -58,7 +64,7 @@ const { title, ghButton, ghLink, vercelButton, vercelLink } = Astro.props;
 		<a
 			href={ghLink}
 			target="_blank"
-			class="mt-4 items-center gap-2 inline-flex w-full justify-center px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold leading-tight uppercase rounded-xl shadow-md hover:from-purple-600 hover:to-blue-500 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-300 ease-in-out transform hover:scale-105"
+			class="mt-4 items-center gap-2 inline-flex w-full justify-center px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-[#FAFAFA] font-semibold leading-tight uppercase rounded-xl shadow-md hover:from-purple-600 hover:to-blue-500 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-300 ease-in-out transform hover:scale-105"
 		>
 			{ghButton}<svg
 				role="img"
@@ -80,7 +86,7 @@ const { title, ghButton, ghLink, vercelButton, vercelLink } = Astro.props;
 				<a
 					href={vercelLink}
 					target="_blank"
-					class="mt-4 items-center gap-2 inline-flex w-full justify-center px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold leading-tight uppercase rounded-xl shadow-md hover:from-purple-600 hover:to-blue-500 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-300 ease-in-out transform hover:scale-105"
+					class="mt-4 items-center gap-2 inline-flex w-full justify-center px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-[#FAFAFA] font-semibold leading-tight uppercase rounded-xl shadow-md hover:from-purple-600 hover:to-blue-500 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-300 ease-in-out transform hover:scale-105"
 				>
 					{vercelButton}
 					<svg

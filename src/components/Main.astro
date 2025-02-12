@@ -8,9 +8,10 @@ import TecnologiesTools from "./TecnologiesTools.astro";
 import TecnologiesSection from "./TecnologiesSection.astro";
 import SwipperTodoApp from "./SwipperTodoApp.astro";
 import SwipperMemoji from "./SwipperMemoji.astro";
+import SwipperTrelloClone from "./SwipperTrelloClone.astro";
 ---
 
-<main class="lg:w-[80vw] px-4 lg:max-w-[60vw] mx-auto flex flex-col my-4">
+<main class="lg:w-[80vw] px-4 lg:max-w-[60vw] mx-auto flex flex-col">
 	<TitleSection> Tecnologías </TitleSection>
 	<TecnologiesSection>
 		<TecnologiesFrontend />
@@ -18,10 +19,10 @@ import SwipperMemoji from "./SwipperMemoji.astro";
 		<TecnologiesBackend />
 		<TecnologiesTools />
 	</TecnologiesSection>
-	<Timeline />
 	<TitleSection> Aplicaciones </TitleSection>
 	<div class="gap-4 mx-auto lg:mx-0 lg:flex lg:justify-center">
-		<SwipperMemoji />
+		<SwipperTrelloClone />
 		<SwipperTodoApp />
+		<SwipperMemoji />
 	</div>
 </main>
