@@ -8,21 +8,24 @@ import TecnologiesTools from "./TecnologiesTools.astro";
 import TecnologiesSection from "./TecnologiesSection.astro";
 import SwipperTodoApp from "./SwipperTodoApp.astro";
 import SwipperMemoji from "./SwipperMemoji.astro";
-import SwipperTrelloClone from "./SwipperTrelloClone.astro";
+import Wip from "./Wip.astro";
 ---
 
-<main class="lg:w-[80vw] px-4 lg:max-w-[60vw] mx-auto flex flex-col">
-	<TitleSection> Tecnologías </TitleSection>
-	<TecnologiesSection>
-		<TecnologiesFrontend />
-		<TecnologiesMobile />
-		<TecnologiesBackend />
-		<TecnologiesTools />
-	</TecnologiesSection>
-	<TitleSection> Aplicaciones </TitleSection>
-	<div class="gap-4 mx-auto lg:mx-0 lg:flex lg:justify-center">
-		<SwipperTrelloClone />
-		<SwipperTodoApp />
-		<SwipperMemoji />
-	</div>
+<main class="container mx-auto px-4 flex flex-col mb-4">
+  <TitleSection> Tecnologías </TitleSection>
+  <TecnologiesSection>
+    <TecnologiesFrontend />
+    <TecnologiesMobile />
+    <TecnologiesBackend />
+    <TecnologiesTools />
+  </TecnologiesSection>
+  <Wip />
+
+  <TitleSection> Otros proyectos </TitleSection>
+  <div
+    class="flex flex-col lg:flex-row justify-center items-center gap-4 mx-auto lg:mx-0 bg-gray-700/30 shadow-lg rounded-xl p-4 border-2 border-gray-700 bg-gradient-to-br from-gray-700/80 via-gray-800/50 to-gray-900/80"
+  >
+    <SwipperTodoApp />
+    <SwipperMemoji />
+  </div>
 </main>
