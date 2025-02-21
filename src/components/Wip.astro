@@ -4,6 +4,8 @@ import { defineConfig } from "astro/config";
 import Section from "./Section.astro";
 import SwipperTrelloClone from "./SwipperTrelloClone.astro";
 import { Octokit } from "octokit";
+import { Image } from "astro:assets";
+import gitMerge from "../images/icons/git-merge2.svg";
 dotenv.config();
 
 const octokit = new Octokit({
@@ -17,7 +19,6 @@ function dateFormat(date: string) {
   const dateFormatted = `${dateToFormat.getFullYear()}-${String(dateToFormat.getMonth() + 1).padStart(2, "0")}-${String(dateToFormat.getDate()).padStart(2, "0")} ${String(dateToFormat.getHours()).padStart(2, "0")}:${String(dateToFormat.getMinutes()).padStart(2, "0")}`;
   return dateFormatted;
 }
-
 try {
   const result = await octokit.request("GET /repos/{owner}/{repo}/commits", {
     owner: "njralonso",
@@ -27,6 +28,7 @@ try {
     },
   });
   commits = result.data.slice(0, 5);
+  console.log(result);
 } catch (error) {
   console.log(
     `Error! Status: ${error.status}. Message: ${error.response.data.message}`,
@@ -52,10 +54,9 @@ try {
         class="text-base text-gray-700 flex items-center gap-2 mb-2 text-balance"
       >
         <span
-          >Entrenar mis skills de backend haciendo una variante de <span
-            class="font-semibold">Trello/Asana</span
-          >.</span
-        >
+          >Entrenar mis habilidades backend para vencer a
+          <span class="font-semibold">Elliot Alderson.</span>
+        </span>
       </p>
 
       {/* Sección de Commits */}
@@ -67,14 +68,17 @@ try {
       <ul class="mt-3 space-y-3">
         {
           commits.map((item) => (
-            <li class="p-3 bg-[#FAFAFA]/80 rounded-xl shadow-sm border border-gray-300 transition-all hover:bg-gray-200 hover:shadow-md">
-              <p class="text-sm text-gray-700">
-                <span class="font-semibold text-emerald-700 flex items-center gap-1">
-                  {dateFormat(item.commit.committer.date)}
-                </span>
-                {item.commit.message}
-              </p>
-            </li>
+            <>
+              <li class="p-3 bg-[#FAFAFA]/80 rounded-xl shadow-sm border border-gray-300 transition-all hover:bg-gray-200 hover:shadow-md flex items-center gap-2">
+                <Image src={gitMerge} alt="git_icon" class="w-8 h-8" />
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold text-emerald-700 flex items-center gap-1">
+                    {dateFormat(item.commit.committer.date)}
+                  </span>
+                  {item.commit.message}
+                </p>
+              </li>
+            </>
           ))
         }
       </ul>
