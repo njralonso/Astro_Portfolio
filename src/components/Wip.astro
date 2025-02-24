@@ -6,7 +6,6 @@ import { Octokit } from "octokit";
 import { Image } from "astro:assets";
 import gitMerge from "../images/icons/git-merge2.svg";
 dotenv.config();
-
 const octokit = new Octokit({
 	auth: process.env.GITHUB_TOKEN,
 });
