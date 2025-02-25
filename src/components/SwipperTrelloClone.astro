@@ -4,22 +4,26 @@ import SwipperInProgress from "./SwipperInProgress.astro";
 import { Image } from "astro:assets";
 import img1 from "../images/trello-clone-login.png";
 import img2 from "../images/trello-clone-boards.png";
+import img3 from "../images/trello-clone-task.png";
 import mern from "../images/mern-stack-01.webp";
 ---
 
 <SwipperInProgress
-  title="Task Manager"
-  ghButton="Ver en Github"
-  ghLink="https://github.com/njralonso/trello-clone-mern"
+	title="Task Manager"
+	ghButton="Ver en Github"
+	ghLink="https://github.com/njralonso/trello-clone-mern"
 >
-  <div class="swiper-slide" slot="images">
-    <Image src={img1} alt="placeholder" class="rounded-md" />
-  </div>
-  <div class="swiper-slide" slot="images">
-    <Image src={img2} alt="placeholder" class="rounded-md" />
-  </div>
+	<div class="swiper-slide" slot="images">
+		<Image src={img1} alt="placeholder" class="rounded-md" />
+	</div>
+	<div class="swiper-slide" slot="images">
+		<Image src={img2} alt="placeholder" class="rounded-md" />
+	</div>
+	<div class="swiper-slide" slot="images">
+		<Image src={img3} alt="placeholder" class="rounded-md" />
+	</div>
 
-  <div class="flex gap-4 mt-4 justify-center w-[12rem] mx-auto" slot="icons">
-    <Image src={mern} alt="placeholder" class="rounded-md" />
-  </div>
+	<div class="flex gap-4 mt-4 justify-center w-[12rem] mx-auto" slot="icons">
+		<Image src={mern} alt="placeholder" class="rounded-md" />
+	</div>
 </SwipperInProgress>
