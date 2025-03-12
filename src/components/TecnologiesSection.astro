@@ -1,3 +1,62 @@
-<div class="flex flex-col gap-4 lg:flex-row">
-  <slot />
+---
+import { Image } from "astro:assets";
+import IconJavascript from "../images/icons/javascript.svg";
+import IconTypescript from "../images/icons/typescript.svg";
+import IconReact from "../images/icons/react.svg";
+import iconRedux from "../images/icons/redux.svg";
+import MongoDB from "../images/icons/mongodb.svg";
+import Express from "../images/icons/icons8-express-js.svg";
+import Nodejs from "../images/icons/nodejs.svg";
+---
+
+<div class="flex flex-col">
+	<div>
+		<div
+			class="relative flex flex-col w-full p-6 rounded-xl border-2 border-gray-700 bg-gradient-to-br from-gray-700/50 via-black-800/80 to-gray-900/50 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.9)] transition-all duration-300 ease-in-out justify-around mb-4"
+		>
+			<h2
+				class="text-center text-3xl font-extrabold text-[#000] mb-6 tracking-wide"
+			>
+				Main Stack
+			</h2>
+			<div
+				class="flex flex-row p-4 gap-4 items-center justify-center flex-wrap"
+			>
+				<Image
+					src={IconJavascript}
+					alt="icon_javascript.svg"
+					class="w-12 h-12 tech-icon"
+				/>
+				<Image
+					src={IconTypescript}
+					alt="icon_typescript.svg"
+					class="w-12 h-12 tech-icon"
+				/>
+				<Image
+					src={IconReact}
+					alt="icon_react.svg"
+					class="w-12 h-12 tech-icon"
+				/>
+				<Image
+					src={iconRedux}
+					alt="icon_redux.svg"
+					class="w-12 h-12 tech-icon"
+				/>
+				<Image
+					src={Express}
+					alt="icon_express.svg"
+					class="w-12 h-12 tech-icon"
+				/>
+				<Image
+					src={MongoDB}
+					alt="icon_mongodb.svg"
+					class="w-12 h-12 tech-icon"
+				/>
+				<Image src={Nodejs} alt="icon_nodejs.svg" class="w-12 h-12 tech-icon" />
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-col gap-4 lg:flex-row">
+		<slot />
+	</div>
 </div>

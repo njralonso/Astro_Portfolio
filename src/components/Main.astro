@@ -1,5 +1,4 @@
 ---
-import Timeline from "./Timeline.astro";
 import TitleSection from "./TitleSection.astro";
 import TecnologiesFrontend from "./TecnologiesFrontend.astro";
 import TecnologiesMobile from "./TecnologiesMobile.astro";
@@ -12,20 +11,20 @@ import Wip from "./Wip.astro";
 ---
 
 <main class="container mx-auto px-4 flex flex-col mb-4">
-  <TitleSection> Tecnologías </TitleSection>
-  <TecnologiesSection>
-    <TecnologiesFrontend />
-    <TecnologiesMobile />
-    <TecnologiesBackend />
-    <TecnologiesTools />
-  </TecnologiesSection>
-  <Wip />
+	<TitleSection> Tecnologías </TitleSection>
+	<TecnologiesSection>
+		<TecnologiesFrontend />
+		<TecnologiesMobile />
+		<TecnologiesBackend />
+		<TecnologiesTools />
+	</TecnologiesSection>
+	<Wip />
 
-  <TitleSection> Otras pequeñas aplicaciones </TitleSection>
-  <div
-    class="flex flex-col lg:flex-row gap-4 justify-center bg-gray-700/30 shadow-lg rounded-xl p-4 border-2 border-gray-700 bg-gradient-to-br from-gray-700/80 via-gray-800/50 to-gray-900/80 w-fit mx-auto"
-  >
-    <SwipperTodoApp />
-    <SwipperMemoji />
-  </div>
+	<TitleSection> Otras pequeñas aplicaciones </TitleSection>
+	<div
+		class="flex flex-col lg:flex-row gap-4 justify-center bg-gray-700/30 shadow-lg rounded-xl p-4 border-2 border-gray-700 bg-gradient-to-br from-gray-700/80 via-gray-800/50 to-gray-900/80 w-fit mx-auto"
+	>
+		<SwipperTodoApp />
+		<SwipperMemoji />
+	</div>
 </main>
