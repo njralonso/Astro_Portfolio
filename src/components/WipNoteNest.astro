@@ -1,7 +1,7 @@
 ---
 import dotenv from "dotenv";
 import Section from "./Section.astro";
-import SwipperTrelloClone from "./SwipperTrelloClone.astro";
+import SwipperNoteNest from "./SwipperNoteNest.astro";
 import { Octokit } from "octokit";
 import { Image } from "astro:assets";
 import gitMerge from "../images/icons/git-merge2.svg";
@@ -20,7 +20,7 @@ function dateFormat(date: string) {
 try {
 	const result = await octokit.request("GET /repos/{owner}/{repo}/commits", {
 		owner: "njralonso",
-		repo: "trello-clone-mern",
+		repo: "mern_noteNest",
 		headers: {
 			"X-GitHub-Api-Version": "2022-11-28",
 		},
@@ -39,7 +39,7 @@ try {
 		class="flex flex-col lg:h-[500px] lg:flex-row gap-4 bg-gray-700/30 shadow-lg rounded-xl p-4 border-2 border-gray-700 bg-gradient-to-br from-gray-700/80 via-gray-800/50 to-gray-900/80"
 	>
 		{/* Swiper del Trello Clone */}
-		<SwipperTrelloClone />
+		<SwipperNoteNest />
 
 		{/* Contenedor de información */}
 		<div
@@ -50,12 +50,12 @@ try {
 				Finalidad del proyecto
 			</h3>
 			<p
-				class="text-base text-gray-700 flex items-center gap-2 mb-2 text-balance"
+				class="text-sm text-gray-700 flex items-center gap-2 mb-2 text-balance"
 			>
 				<span
-					>Entrenar mis habilidades backend para vencer a
-					<span class="font-semibold">Elliot Alderson.</span>
-				</span>
+					>Hacer mi propia aplicación de notas para guardar scripts, notas,
+					ejemplos y chuletas, etc.</span
+				>
 			</p>
 
 			{/* Sección de Commits */}

@@ -1,0 +1,25 @@
+---
+import SwipperInProgress from "./SwipperInProgress.astro";
+
+import { Image } from "astro:assets";
+import img1 from "../images/noteNest/login.png";
+import img2 from "../images/noteNest/home.png";
+import mern from "../images/mern-stack-01.webp";
+---
+
+<SwipperInProgress
+	title="Note Nest"
+	ghButton="Ver en Github"
+	ghLink="https://github.com/njralonso/mern_noteNest"
+>
+	<div class="swiper-slide" slot="images">
+		<Image src={img1} alt="placeholder" class="rounded-md" />
+	</div>
+	<div class="swiper-slide" slot="images">
+		<Image src={img2} alt="placeholder" class="rounded-md" />
+	</div>
+
+	<div class="flex gap-4 mt-4 justify-center w-[12rem] mx-auto" slot="icons">
+		<Image src={mern} alt="placeholder" class="rounded-md" />
+	</div>
+</SwipperInProgress>
